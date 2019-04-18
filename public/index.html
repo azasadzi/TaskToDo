@@ -1,6 +1,8 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- link gotten from Font Awesome website for icon-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
     <body>
         <!-- class refers to class in css that applies style to everything that has that class-->
@@ -11,14 +13,42 @@
         <div class="new-button">
             + Create New Category
         </div>
-        <div class="category">
+        <div class="category" id="category-template">
             <div class="category-header">
-                Category 1
+                <div class="category-header-title"> Category 1</div>
+                <!-- when you include a style attribute to a div with a class, anything in the style attribute overrides the class in CSS-->
+                <div class="new-button" style="width:100px; float:right; margin-top:-2px;"> 
+                    + Add Task
+                </div>
             </div>
             <div class="category-body">
                 To Do:
+                <table>
+                    <tbody>
+                        <!-- One row with 4 columns-->
+                        <tr>
+                            <td>
+                                <!-- added my own icon class to the already given classes from Font Awesome-->
+                                <i class="far fa-check-circle icon"></i>
+                            </td>
+                            <td>
+                                Our first task
+                            </td>
+                            <td>
+                                Due Date
+                            </td>
+                            <td>
+                                <i class="far fa-trash-alt icon"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
+        <!-- -->
+        <div id="category-content"></div>
     </body>
 
+    <!-- Adding javascript file at the bottom of html file-->
+    <script src="script.js"></script>
 </html>

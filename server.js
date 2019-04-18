@@ -15,6 +15,10 @@ app.get("/style.css", (req,res) => {
     console.log("style.css hit")
     res.sendFile(__dirname + "/public/style.css")
 })
+app.get("/script.js",(req,res)=>{
+    console.log('script.js hit.')
+    res.sendFile(__dirname + "/public/script.js");
+})
 
 //telling us in the server that we are using local host 3000
 console.log("Starting server on 3000");
