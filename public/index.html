@@ -10,37 +10,21 @@
             TaskToDo
         </div>
         <!-- making a button using a div-->
-        <div class="new-button">
+        <div class="new-button" onclick="createCategory(this.id)">
             + Create New Category
         </div>
         <div class="category" id="category-template">
             <div class="category-header">
                 <div class="category-header-title"> Category 1</div>
                 <!-- when you include a style attribute to a div with a class, anything in the style attribute overrides the class in CSS-->
-                <div class="new-button" style="width:100px; float:right; margin-top:-2px;"> 
+                <div class="new-button" style="width:100px; float:right; margin-top:-2px;" onclick="createTask(this)"> 
                     + Add Task
                 </div>
             </div>
             <div class="category-body">
                 To Do:
                 <table>
-                    <tbody>
-                        <!-- One row with 4 columns-->
-                        <tr>
-                            <td>
-                                <!-- added my own icon class to the already given classes from Font Awesome-->
-                                <i class="far fa-check-circle icon"></i>
-                            </td>
-                            <td>
-                                Our first task
-                            </td>
-                            <td>
-                                Due Date
-                            </td>
-                            <td>
-                                <i class="far fa-trash-alt icon"></i>
-                            </td>
-                        </tr>
+                    <tbody class="tbody">
                     </tbody>
                 </table>
             </div>
